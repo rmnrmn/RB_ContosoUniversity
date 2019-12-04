@@ -10,7 +10,7 @@ namespace ContosoUniversity.Data
     {
         public static void Initialize(UniversityContext context)
         {
-            //context.Database.EnsureCreated();
+            //context.Database;
 
             // Look for any students.
             if (context.Student.Any())
