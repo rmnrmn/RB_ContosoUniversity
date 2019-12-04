@@ -1,4 +1,5 @@
-﻿using ContosoUniversity.Models;                   // SchoolContext
+﻿using ContosoUniversity.Data;
+using ContosoUniversity.Models;                   // SchoolContext
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;   // CreateScope

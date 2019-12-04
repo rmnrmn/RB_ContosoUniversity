@@ -29,7 +29,7 @@ namespace ContosoUniversity.Pages
                 return NotFound();
             }
 
-            Student = await _context.Student.FirstOrDefaultAsync(m => m.ID == id);
+            Student = await _context.Student.FindAsync(id);
 
             if (Student == null)
             {
@@ -45,7 +45,7 @@ namespace ContosoUniversity.Pages
                 return Page();
             }
 
-            _context.Attach(Student).State = EntityState.Modified;
+            var studentToUpdate = await _context.Student.FindAsync(Student);
 
             try
             {
